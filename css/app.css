@@ -1,0 +1,280 @@
+body {
+  background-color: #FFFFCC;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+/* Блок HEADER*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  /*background-color: #FFFEFC;*/
+}
+
+
+.header__title {
+  color: #FF0000;
+  padding: 0 50px;
+}
+
+.header__phone {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+/* Блок REQUEST*/
+
+.request {
+  background-image: url(../img/ground1.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
+
+.request__description {
+  max-width: 360px;
+  text-align: center;
+  border: 2px solid #FF0000;
+  border-radius: 5px;
+  background-color: #FFFEFC;
+  margin: 10px 25px;
+}
+
+.request__description-title,
+.request__form-title {
+  color: #FF0000;
+  text-transform: uppercase;
+}
+
+.request__form {
+  max-width: 360px;
+  text-align: center;
+  border: 2px solid #FF0000;
+  border-radius: 5px;
+  background-color: #FFFEFC;
+  margin: 10px 25px;
+}
+
+.request__form-input {
+  width: 85%;
+  height: 35px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  border-radius: 3px;
+  padding-left: 10px;
+}
+
+.request__form-btn {
+  width: 85%;
+  height: 40px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: -moz-linear-gradient(#FF9999, #FF0000);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#FF9999), to(#FF0000));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF9999', endColorstr='#FF0000');
+  color: #FFFEFC;
+  font-weight: bold;
+}
+
+.request__form-btn:hover {
+  background: -moz-linear-gradient(#CCCCCC, #CC0033);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#CCCCCC), to(#CC0033));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCCCCC', endColorstr='#CC0033');
+  color: #FFFEFC;
+}
+
+/* Блок VISTA */
+.vista {
+  /*background-color: #FFFFCC;*/
+}
+
+.vista__title {
+  text-align: center;
+  color: #FF0000;
+  font-size: 2em;
+}
+
+.vista__items {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  /*background-color: #FFFEFC;*/
+}
+
+.vista__item {
+  max-width: 300px;
+  padding:5px 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+.video {
+  background-color: #CCCC66;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.video__title {
+  color: #FF0000;
+  padding-top: 25px;
+}
+
+.advantage {
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+.advantage__title {
+  color: #FF0000;
+  padding-top: 25px;
+}
+
+.advantage__orbit {
+  max-width: 750px;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.orbit-container {
+  padding: 0 5px;
+}
+
+.orbit__title {
+  color: #FF0000;
+  padding-top: 15px;
+  font-size: 1.3em;
+}
+
+.orbit__text {
+  font-size: 1.2em;
+  color: #666666;
+}
+
+.orbit__nav {
+  color: #999999;
+}
+
+/*  Блок PRISE */
+.prise {
+  background-color: #CCCC66;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.prise__title {
+  color: #FF0000;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.prise__block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.prise__option {
+  background-color: #F5F5F5;
+  text-align: center;
+  padding: 20px;
+  margin: 0 25px 15px 25px;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+.prise__option-its {
+  font-size: 24px;
+}
+
+.prise__option-prise {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.prise__nb {
+  text-align: center;
+  padding: 10px;
+}
+
+.map {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.map__title {
+  color: #FF0000;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.map__maps {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.map__kontakt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.map__right {
+  font-weight: bold;
+}
+
+.footer {
+  
+  width: 100%;
+  background-color: #CCCC66;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5px 10px;
+  
+}
+
+.footer__left {
+  min-width: 45%;
+  text-align: right;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.footer__right {
+  text-align: right;
+  font-size: 10px;
+}
+
+.footer__link {
+  text-decoration: none;
+}
+
+.footer__link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+  color: #666666;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .video__sample {
+    width: 280px;
+    height: 152px;
+    
+  }
+}
