@@ -190,7 +190,7 @@ body {
   text-align: center;
   padding: 20px;
   margin: 0 25px 15px 25px;
-  max-width: 600px;
+  width: 45%;
   border-radius: 5px;
 }
 
@@ -281,5 +281,9 @@ body {
     width: 280px;
     height: 152px;
     
+  }
+
+  .prise__option {
+    width: 90%;
   }
 }
