@@ -1,16 +1,19 @@
  <?php
+ mb_internal_encoding("UTF-8");
 /* Осуществляем проверку вводимых данных и их защиту от враждебных 
 скриптов */
 $your_name = htmlspecialchars($_POST["request-name"]);
 $your_phone = htmlspecialchars($_POST["request-phone"]);
+$your_name = urldecode($_POST["request-name"]);
+$your_phone = urldecode($_POST["request-phone"]);
 
 /* Устанавливаем e-mail адресата */
-$myemail = "my_email@mail.ru";
+$myemail = "sale-rep@gk-soft.ru, sale@gk-soft.ru, unp@gk-soft.ru";
 /* Проверяем заполнены ли обязательные поля ввода, используя check_input 
 функцию */
 $your_name = check_input($_POST["request-name"], "Введите ваше имя!");
 
-$your_phone = check_input($_POST["request-phone"], "Введите ваш e-mail!");
+$your_phone = check_input($_POST["request-phone"], "Введите ваш телефон!");
 
 
 /* Создаем новую переменную, присвоив ей значение */
@@ -20,11 +23,14 @@ $message_to_myemail = "Здравствуйте!
 Телефон: $your_phone 
 Конец";
 /* Отправляем сообщение, используя mail() функцию */
-$from  = "From: $yourname <$your_phone> \r\n "; 
-mail($myemail, $message_to_myemail, $from);
+$from  = "От кого: лэндинг 1С-Отчетность \r\n "; 
+mail($myemail, "Запрос со страницы 1С-Отчетность", $message_to_myemail, $from);
 ?>
-<p>Ваше сообщение было успешно отправлено!</p>
-<p>На <a href="index.html">Главную </a></p>
+<head>
+    <meta charset="utf-8">
+</head>    
+<p align="center">Ваше сообщение было успешно отправлено!</p>
+<p align="center"><a href="../index.html">Вернуться обратно</a></p>
 <?php
 /* Если при заполнении формы были допущены ошибки сработает 
 следующий код: */

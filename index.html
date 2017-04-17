@@ -32,7 +32,7 @@
       <form class="request__form" name="form_request" id="form_request" action="php/sender.php" method="post">
         <h4 class="request__form-title">Оставьте телефон и получите бесплатную консультацию по подключению:</h4>
         <label for="request-name">Ваше имя:</label>
-        <input type="text" placeholder="Ваше имя" class="request__form-input" name="request-name" required="" form="form_request" >
+        <input type="text" placeholder="Ваше имя" class="request__form-input" name="request-name" required="" form="form_request"  pattern="^[A-Za-zА-Яа-яЁё\s]+$">
         <label for="request-phone">Телефон в формате +7-ххх-ххх-хх-хх</label>
         <input id="phone" type="text" placeholder="Телефон" class="request__form-input" name="request-phone" required="" form="form_request" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
         <input type="submit" name="request-btn" value="Отправить заявку" class="request__form-btn" form="form_request">
