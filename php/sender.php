@@ -1,5 +1,5 @@
  <?php
- mb_internal_encoding("UTF-8");
+ 
 /* Осуществляем проверку вводимых данных и их защиту от враждебных 
 скриптов */
 $your_name = htmlspecialchars($_POST["request-name"]);
@@ -8,26 +8,33 @@ $your_name = urldecode($_POST["request-name"]);
 $your_phone = urldecode($_POST["request-phone"]);
 
 /* Устанавливаем e-mail адресата */
-$myemail = "sale-rep@gk-soft.ru, sale@gk-soft.ru, unp@gk-soft.ru";
+$myemail = "sale@gk-soft.ru, sale-rep@gk-soft.ru, unp@gk-soft.ru";
 /* Проверяем заполнены ли обязательные поля ввода, используя check_input 
 функцию */
 $your_name = check_input($_POST["request-name"], "Введите ваше имя!");
 
 $your_phone = check_input($_POST["request-phone"], "Введите ваш телефон!");
 
-
+$date_today = date("d.m.y H:i");
 /* Создаем новую переменную, присвоив ей значение */
 $message_to_myemail = "Здравствуйте! 
-Вашей контактной формой было отправлено сообщение! 
+Поступила заявка на ознакомление с сервисом 1С-Отчетность. 
 Имя отправителя: $your_name 
-Телефон: $your_phone 
+Телефон: $your_phone
+Дата отправки: $date_today 
 Конец";
+$from  = "От кого: лэндинг 1С-Отчетность \r\n ";
+$subject = "Запрос со страницы 1С-Отчетность";
+$subject = iconv("utf-8", "windows-1251", $subject);
+$message_to_myemail = iconv("utf-8", "koi8-r", $message_to_myemail);
+$from = iconv("utf-8", "koi8-r", $from);
 /* Отправляем сообщение, используя mail() функцию */
-$from  = "От кого: лэндинг 1С-Отчетность \r\n "; 
-mail($myemail, "Запрос со страницы 1С-Отчетность", $message_to_myemail, $from);
+
+mail($myemail, $subject, $message_to_myemail, $from);
 ?>
 <head>
     <meta charset="utf-8">
+    <meta http-equiv='refresh' content='5; url=http://gk-soft.ru/1c-rep/'></meta>
 </head>    
 <p align="center">Ваше сообщение было успешно отправлено!</p>
 <p align="center"><a href="../index.html">Вернуться обратно</a></p>
